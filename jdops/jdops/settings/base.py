@@ -1,3 +1,4 @@
+# coding: utf-8
 """
 Django settings for autoops project.
 
@@ -32,13 +33,17 @@ ALLOWED_HOSTS = ['*']
 
 INSTALLED_APPS = (
     'asset',
-
+    
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
     'django.contrib.sessions',
+    'django.contrib.sites',  # 这个貌似待会不注释掉会出问题
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'xadmin',
+    'crispy_forms',
+    'reversion',
 )
 
 MIDDLEWARE_CLASSES = (
