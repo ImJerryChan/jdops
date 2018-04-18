@@ -16,15 +16,15 @@ Including another URLconf
 from django.conf.urls import url, include
 from django.contrib import admin
 
-from asset import views as asset_views
+#from asset import views as asset_views
 
 import xadmin
 xadmin.autodiscover()
 
 urlpatterns = [
-    url(r'^$', asset_views.index),
-    url(r'^menu/', asset_views.menu),
-    url(r'^main/', asset_views.main),
-    url(r'^host/', asset_views.host),
+    #url(r'^$', asset_views.index),
+    #url(r'^menu/', asset_views.menu),
+    #url(r'^main/', asset_views.main),
+    #url(r'^host/', asset_views.host),
     url(r'^xadmin/', include(xadmin.site.urls), name='xadmin'),
 ]

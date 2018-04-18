@@ -32,13 +32,12 @@ ALLOWED_HOSTS = ['*']
 # Application definition
 
 INSTALLED_APPS = (
-    'asset',
-    
+    #'asset',
+    'asset.apps.AssetConfig',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
     'django.contrib.sessions',
-    'django.contrib.sites',  # 这个貌似待会不注释掉会出问题
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'xadmin',

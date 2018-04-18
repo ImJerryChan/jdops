@@ -100,3 +100,802 @@ Traceback (most recent call last):
   File "/usr/local/PythonVirtualENV/MyTestENV/lib/python2.7/site-packages/django/db/models/sql/compiler.py", line 899, in execute_sql
     raise original_exception
 ProgrammingError: (1146, "Table 'jdops.django_session' doesn't exist")
+ERROR 2018-04-17 09:51:48,727 exception:handle_uncaught_exception:135 Internal Server Error: /xadmin/
+Traceback (most recent call last):
+  File "/usr/local/PythonVirtualENV/MyTestENV/lib/python2.7/site-packages/django/core/handlers/exception.py", line 41, in inner
+    response = get_response(request)
+  File "/usr/local/PythonVirtualENV/MyTestENV/lib/python2.7/site-packages/django/core/handlers/base.py", line 249, in _legacy_get_response
+    response = self._get_response(request)
+  File "/usr/local/PythonVirtualENV/MyTestENV/lib/python2.7/site-packages/django/core/handlers/base.py", line 187, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/usr/local/PythonVirtualENV/MyTestENV/lib/python2.7/site-packages/django/core/handlers/base.py", line 185, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/usr/local/PythonVirtualENV/MyTestENV/lib/python2.7/site-packages/xadmin/sites.py", line 300, in wrapper
+    return self.admin_view(view, cacheable)(*args, **kwargs)
+  File "/usr/local/PythonVirtualENV/MyTestENV/lib/python2.7/site-packages/django/views/decorators/cache.py", line 57, in _wrapped_view_func
+    response = view_func(request, *args, **kwargs)
+  File "/usr/local/PythonVirtualENV/MyTestENV/lib/python2.7/site-packages/xadmin/sites.py", line 207, in inner
+    return self.create_admin_view(self.login_view)(request, *args, **kwargs)
+  File "/usr/local/PythonVirtualENV/MyTestENV/lib/python2.7/site-packages/xadmin/views/base.py", line 279, in view
+    return handler(request, *args, **kwargs)
+  File "/usr/local/PythonVirtualENV/MyTestENV/lib/python2.7/site-packages/django/views/decorators/cache.py", line 57, in _wrapped_view_func
+    response = view_func(request, *args, **kwargs)
+  File "/usr/local/PythonVirtualENV/MyTestENV/lib/python2.7/site-packages/xadmin/views/website.py", line 66, in get
+    return login(request, **defaults)
+  File "/usr/local/PythonVirtualENV/MyTestENV/lib/python2.7/site-packages/django/contrib/auth/views.py", line 54, in inner
+    return func(*args, **kwargs)
+  File "/usr/local/PythonVirtualENV/MyTestENV/lib/python2.7/site-packages/django/contrib/auth/views.py", line 150, in login
+    )(request)
+  File "/usr/local/PythonVirtualENV/MyTestENV/lib/python2.7/site-packages/django/views/generic/base.py", line 68, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/usr/local/PythonVirtualENV/MyTestENV/lib/python2.7/site-packages/django/utils/decorators.py", line 67, in _wrapper
+    return bound_func(*args, **kwargs)
+  File "/usr/local/PythonVirtualENV/MyTestENV/lib/python2.7/site-packages/django/views/decorators/debug.py", line 76, in sensitive_post_parameters_wrapper
+    return view(request, *args, **kwargs)
+  File "/usr/local/PythonVirtualENV/MyTestENV/lib/python2.7/site-packages/django/utils/decorators.py", line 63, in bound_func
+    return func.__get__(self, type(self))(*args2, **kwargs2)
+  File "/usr/local/PythonVirtualENV/MyTestENV/lib/python2.7/site-packages/django/utils/decorators.py", line 67, in _wrapper
+    return bound_func(*args, **kwargs)
+  File "/usr/local/PythonVirtualENV/MyTestENV/lib/python2.7/site-packages/django/utils/decorators.py", line 149, in _wrapped_view
+    response = view_func(request, *args, **kwargs)
+  File "/usr/local/PythonVirtualENV/MyTestENV/lib/python2.7/site-packages/django/utils/decorators.py", line 63, in bound_func
+    return func.__get__(self, type(self))(*args2, **kwargs2)
+  File "/usr/local/PythonVirtualENV/MyTestENV/lib/python2.7/site-packages/django/utils/decorators.py", line 67, in _wrapper
+    return bound_func(*args, **kwargs)
+  File "/usr/local/PythonVirtualENV/MyTestENV/lib/python2.7/site-packages/django/views/decorators/cache.py", line 57, in _wrapped_view_func
+    response = view_func(request, *args, **kwargs)
+  File "/usr/local/PythonVirtualENV/MyTestENV/lib/python2.7/site-packages/django/utils/decorators.py", line 63, in bound_func
+    return func.__get__(self, type(self))(*args2, **kwargs2)
+  File "/usr/local/PythonVirtualENV/MyTestENV/lib/python2.7/site-packages/django/contrib/auth/views.py", line 90, in dispatch
+    return super(LoginView, self).dispatch(request, *args, **kwargs)
+  File "/usr/local/PythonVirtualENV/MyTestENV/lib/python2.7/site-packages/django/views/generic/base.py", line 88, in dispatch
+    return handler(request, *args, **kwargs)
+  File "/usr/local/PythonVirtualENV/MyTestENV/lib/python2.7/site-packages/django/views/generic/edit.py", line 174, in get
+    return self.render_to_response(self.get_context_data())
+  File "/usr/local/PythonVirtualENV/MyTestENV/lib/python2.7/site-packages/django/contrib/auth/views.py", line 124, in get_context_data
+    current_site = get_current_site(self.request)
+  File "/usr/local/PythonVirtualENV/MyTestENV/lib/python2.7/site-packages/django/contrib/sites/shortcuts.py", line 15, in get_current_site
+    return Site.objects.get_current(request)
+  File "/usr/local/PythonVirtualENV/MyTestENV/lib/python2.7/site-packages/django/contrib/sites/models.py", line 65, in get_current
+    return self._get_site_by_request(request)
+  File "/usr/local/PythonVirtualENV/MyTestENV/lib/python2.7/site-packages/django/contrib/sites/models.py", line 50, in _get_site_by_request
+    SITE_CACHE[domain] = self.get(domain__iexact=domain)
+  File "/usr/local/PythonVirtualENV/MyTestENV/lib/python2.7/site-packages/django/db/models/manager.py", line 85, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "/usr/local/PythonVirtualENV/MyTestENV/lib/python2.7/site-packages/django/db/models/query.py", line 380, in get
+    self.model._meta.object_name
+DoesNotExist: Site matching query does not exist.
+ERROR 2018-04-17 09:51:50,012 exception:handle_uncaught_exception:135 Internal Server Error: /xadmin/
+Traceback (most recent call last):
+  File "/usr/local/PythonVirtualENV/MyTestENV/lib/python2.7/site-packages/django/core/handlers/exception.py", line 41, in inner
+    response = get_response(request)
+  File "/usr/local/PythonVirtualENV/MyTestENV/lib/python2.7/site-packages/django/core/handlers/base.py", line 249, in _legacy_get_response
+    response = self._get_response(request)
+  File "/usr/local/PythonVirtualENV/MyTestENV/lib/python2.7/site-packages/django/core/handlers/base.py", line 187, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/usr/local/PythonVirtualENV/MyTestENV/lib/python2.7/site-packages/django/core/handlers/base.py", line 185, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/usr/local/PythonVirtualENV/MyTestENV/lib/python2.7/site-packages/xadmin/sites.py", line 300, in wrapper
+    return self.admin_view(view, cacheable)(*args, **kwargs)
+  File "/usr/local/PythonVirtualENV/MyTestENV/lib/python2.7/site-packages/django/views/decorators/cache.py", line 57, in _wrapped_view_func
+    response = view_func(request, *args, **kwargs)
+  File "/usr/local/PythonVirtualENV/MyTestENV/lib/python2.7/site-packages/xadmin/sites.py", line 207, in inner
+    return self.create_admin_view(self.login_view)(request, *args, **kwargs)
+  File "/usr/local/PythonVirtualENV/MyTestENV/lib/python2.7/site-packages/xadmin/views/base.py", line 279, in view
+    return handler(request, *args, **kwargs)
+  File "/usr/local/PythonVirtualENV/MyTestENV/lib/python2.7/site-packages/django/views/decorators/cache.py", line 57, in _wrapped_view_func
+    response = view_func(request, *args, **kwargs)
+  File "/usr/local/PythonVirtualENV/MyTestENV/lib/python2.7/site-packages/xadmin/views/website.py", line 66, in get
+    return login(request, **defaults)
+  File "/usr/local/PythonVirtualENV/MyTestENV/lib/python2.7/site-packages/django/contrib/auth/views.py", line 54, in inner
+    return func(*args, **kwargs)
+  File "/usr/local/PythonVirtualENV/MyTestENV/lib/python2.7/site-packages/django/contrib/auth/views.py", line 150, in login
+    )(request)
+  File "/usr/local/PythonVirtualENV/MyTestENV/lib/python2.7/site-packages/django/views/generic/base.py", line 68, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/usr/local/PythonVirtualENV/MyTestENV/lib/python2.7/site-packages/django/utils/decorators.py", line 67, in _wrapper
+    return bound_func(*args, **kwargs)
+  File "/usr/local/PythonVirtualENV/MyTestENV/lib/python2.7/site-packages/django/views/decorators/debug.py", line 76, in sensitive_post_parameters_wrapper
+    return view(request, *args, **kwargs)
+  File "/usr/local/PythonVirtualENV/MyTestENV/lib/python2.7/site-packages/django/utils/decorators.py", line 63, in bound_func
+    return func.__get__(self, type(self))(*args2, **kwargs2)
+  File "/usr/local/PythonVirtualENV/MyTestENV/lib/python2.7/site-packages/django/utils/decorators.py", line 67, in _wrapper
+    return bound_func(*args, **kwargs)
+  File "/usr/local/PythonVirtualENV/MyTestENV/lib/python2.7/site-packages/django/utils/decorators.py", line 149, in _wrapped_view
+    response = view_func(request, *args, **kwargs)
+  File "/usr/local/PythonVirtualENV/MyTestENV/lib/python2.7/site-packages/django/utils/decorators.py", line 63, in bound_func
+    return func.__get__(self, type(self))(*args2, **kwargs2)
+  File "/usr/local/PythonVirtualENV/MyTestENV/lib/python2.7/site-packages/django/utils/decorators.py", line 67, in _wrapper
+    return bound_func(*args, **kwargs)
+  File "/usr/local/PythonVirtualENV/MyTestENV/lib/python2.7/site-packages/django/views/decorators/cache.py", line 57, in _wrapped_view_func
+    response = view_func(request, *args, **kwargs)
+  File "/usr/local/PythonVirtualENV/MyTestENV/lib/python2.7/site-packages/django/utils/decorators.py", line 63, in bound_func
+    return func.__get__(self, type(self))(*args2, **kwargs2)
+  File "/usr/local/PythonVirtualENV/MyTestENV/lib/python2.7/site-packages/django/contrib/auth/views.py", line 90, in dispatch
+    return super(LoginView, self).dispatch(request, *args, **kwargs)
+  File "/usr/local/PythonVirtualENV/MyTestENV/lib/python2.7/site-packages/django/views/generic/base.py", line 88, in dispatch
+    return handler(request, *args, **kwargs)
+  File "/usr/local/PythonVirtualENV/MyTestENV/lib/python2.7/site-packages/django/views/generic/edit.py", line 174, in get
+    return self.render_to_response(self.get_context_data())
+  File "/usr/local/PythonVirtualENV/MyTestENV/lib/python2.7/site-packages/django/contrib/auth/views.py", line 124, in get_context_data
+    current_site = get_current_site(self.request)
+  File "/usr/local/PythonVirtualENV/MyTestENV/lib/python2.7/site-packages/django/contrib/sites/shortcuts.py", line 15, in get_current_site
+    return Site.objects.get_current(request)
+  File "/usr/local/PythonVirtualENV/MyTestENV/lib/python2.7/site-packages/django/contrib/sites/models.py", line 65, in get_current
+    return self._get_site_by_request(request)
+  File "/usr/local/PythonVirtualENV/MyTestENV/lib/python2.7/site-packages/django/contrib/sites/models.py", line 50, in _get_site_by_request
+    SITE_CACHE[domain] = self.get(domain__iexact=domain)
+  File "/usr/local/PythonVirtualENV/MyTestENV/lib/python2.7/site-packages/django/db/models/manager.py", line 85, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "/usr/local/PythonVirtualENV/MyTestENV/lib/python2.7/site-packages/django/db/models/query.py", line 380, in get
+    self.model._meta.object_name
+DoesNotExist: Site matching query does not exist.
+ERROR 2018-04-17 09:51:51,007 exception:handle_uncaught_exception:135 Internal Server Error: /xadmin/
+Traceback (most recent call last):
+  File "/usr/local/PythonVirtualENV/MyTestENV/lib/python2.7/site-packages/django/core/handlers/exception.py", line 41, in inner
+    response = get_response(request)
+  File "/usr/local/PythonVirtualENV/MyTestENV/lib/python2.7/site-packages/django/core/handlers/base.py", line 249, in _legacy_get_response
+    response = self._get_response(request)
+  File "/usr/local/PythonVirtualENV/MyTestENV/lib/python2.7/site-packages/django/core/handlers/base.py", line 187, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/usr/local/PythonVirtualENV/MyTestENV/lib/python2.7/site-packages/django/core/handlers/base.py", line 185, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/usr/local/PythonVirtualENV/MyTestENV/lib/python2.7/site-packages/xadmin/sites.py", line 300, in wrapper
+    return self.admin_view(view, cacheable)(*args, **kwargs)
+  File "/usr/local/PythonVirtualENV/MyTestENV/lib/python2.7/site-packages/django/views/decorators/cache.py", line 57, in _wrapped_view_func
+    response = view_func(request, *args, **kwargs)
+  File "/usr/local/PythonVirtualENV/MyTestENV/lib/python2.7/site-packages/xadmin/sites.py", line 207, in inner
+    return self.create_admin_view(self.login_view)(request, *args, **kwargs)
+  File "/usr/local/PythonVirtualENV/MyTestENV/lib/python2.7/site-packages/xadmin/views/base.py", line 279, in view
+    return handler(request, *args, **kwargs)
+  File "/usr/local/PythonVirtualENV/MyTestENV/lib/python2.7/site-packages/django/views/decorators/cache.py", line 57, in _wrapped_view_func
+    response = view_func(request, *args, **kwargs)
+  File "/usr/local/PythonVirtualENV/MyTestENV/lib/python2.7/site-packages/xadmin/views/website.py", line 66, in get
+    return login(request, **defaults)
+  File "/usr/local/PythonVirtualENV/MyTestENV/lib/python2.7/site-packages/django/contrib/auth/views.py", line 54, in inner
+    return func(*args, **kwargs)
+  File "/usr/local/PythonVirtualENV/MyTestENV/lib/python2.7/site-packages/django/contrib/auth/views.py", line 150, in login
+    )(request)
+  File "/usr/local/PythonVirtualENV/MyTestENV/lib/python2.7/site-packages/django/views/generic/base.py", line 68, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/usr/local/PythonVirtualENV/MyTestENV/lib/python2.7/site-packages/django/utils/decorators.py", line 67, in _wrapper
+    return bound_func(*args, **kwargs)
+  File "/usr/local/PythonVirtualENV/MyTestENV/lib/python2.7/site-packages/django/views/decorators/debug.py", line 76, in sensitive_post_parameters_wrapper
+    return view(request, *args, **kwargs)
+  File "/usr/local/PythonVirtualENV/MyTestENV/lib/python2.7/site-packages/django/utils/decorators.py", line 63, in bound_func
+    return func.__get__(self, type(self))(*args2, **kwargs2)
+  File "/usr/local/PythonVirtualENV/MyTestENV/lib/python2.7/site-packages/django/utils/decorators.py", line 67, in _wrapper
+    return bound_func(*args, **kwargs)
+  File "/usr/local/PythonVirtualENV/MyTestENV/lib/python2.7/site-packages/django/utils/decorators.py", line 149, in _wrapped_view
+    response = view_func(request, *args, **kwargs)
+  File "/usr/local/PythonVirtualENV/MyTestENV/lib/python2.7/site-packages/django/utils/decorators.py", line 63, in bound_func
+    return func.__get__(self, type(self))(*args2, **kwargs2)
+  File "/usr/local/PythonVirtualENV/MyTestENV/lib/python2.7/site-packages/django/utils/decorators.py", line 67, in _wrapper
+    return bound_func(*args, **kwargs)
+  File "/usr/local/PythonVirtualENV/MyTestENV/lib/python2.7/site-packages/django/views/decorators/cache.py", line 57, in _wrapped_view_func
+    response = view_func(request, *args, **kwargs)
+  File "/usr/local/PythonVirtualENV/MyTestENV/lib/python2.7/site-packages/django/utils/decorators.py", line 63, in bound_func
+    return func.__get__(self, type(self))(*args2, **kwargs2)
+  File "/usr/local/PythonVirtualENV/MyTestENV/lib/python2.7/site-packages/django/contrib/auth/views.py", line 90, in dispatch
+    return super(LoginView, self).dispatch(request, *args, **kwargs)
+  File "/usr/local/PythonVirtualENV/MyTestENV/lib/python2.7/site-packages/django/views/generic/base.py", line 88, in dispatch
+    return handler(request, *args, **kwargs)
+  File "/usr/local/PythonVirtualENV/MyTestENV/lib/python2.7/site-packages/django/views/generic/edit.py", line 174, in get
+    return self.render_to_response(self.get_context_data())
+  File "/usr/local/PythonVirtualENV/MyTestENV/lib/python2.7/site-packages/django/contrib/auth/views.py", line 124, in get_context_data
+    current_site = get_current_site(self.request)
+  File "/usr/local/PythonVirtualENV/MyTestENV/lib/python2.7/site-packages/django/contrib/sites/shortcuts.py", line 15, in get_current_site
+    return Site.objects.get_current(request)
+  File "/usr/local/PythonVirtualENV/MyTestENV/lib/python2.7/site-packages/django/contrib/sites/models.py", line 65, in get_current
+    return self._get_site_by_request(request)
+  File "/usr/local/PythonVirtualENV/MyTestENV/lib/python2.7/site-packages/django/contrib/sites/models.py", line 50, in _get_site_by_request
+    SITE_CACHE[domain] = self.get(domain__iexact=domain)
+  File "/usr/local/PythonVirtualENV/MyTestENV/lib/python2.7/site-packages/django/db/models/manager.py", line 85, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "/usr/local/PythonVirtualENV/MyTestENV/lib/python2.7/site-packages/django/db/models/query.py", line 380, in get
+    self.model._meta.object_name
+DoesNotExist: Site matching query does not exist.
+ERROR 2018-04-17 10:43:14,456 exception:handle_uncaught_exception:135 Internal Server Error: /xadmin/asset/host/
+Traceback (most recent call last):
+  File "/usr/local/PythonVirtualENV/MyTestENV/lib/python2.7/site-packages/django/core/handlers/exception.py", line 41, in inner
+    response = get_response(request)
+  File "/usr/local/PythonVirtualENV/MyTestENV/lib/python2.7/site-packages/django/core/handlers/base.py", line 249, in _legacy_get_response
+    response = self._get_response(request)
+  File "/usr/local/PythonVirtualENV/MyTestENV/lib/python2.7/site-packages/django/core/handlers/base.py", line 187, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/usr/local/PythonVirtualENV/MyTestENV/lib/python2.7/site-packages/django/core/handlers/base.py", line 185, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/usr/local/PythonVirtualENV/MyTestENV/lib/python2.7/site-packages/xadmin/sites.py", line 300, in wrapper
+    return self.admin_view(view, cacheable)(*args, **kwargs)
+  File "/usr/local/PythonVirtualENV/MyTestENV/lib/python2.7/site-packages/django/views/decorators/cache.py", line 57, in _wrapped_view_func
+    response = view_func(request, *args, **kwargs)
+  File "/usr/local/PythonVirtualENV/MyTestENV/lib/python2.7/site-packages/xadmin/sites.py", line 208, in inner
+    return view(request, *args, **kwargs)
+  File "/usr/local/PythonVirtualENV/MyTestENV/lib/python2.7/site-packages/xadmin/views/base.py", line 279, in view
+    return handler(request, *args, **kwargs)
+  File "/usr/local/PythonVirtualENV/MyTestENV/lib/python2.7/site-packages/django/utils/decorators.py", line 67, in _wrapper
+    return bound_func(*args, **kwargs)
+  File "/usr/local/PythonVirtualENV/MyTestENV/lib/python2.7/site-packages/django/utils/decorators.py", line 149, in _wrapped_view
+    response = view_func(request, *args, **kwargs)
+  File "/usr/local/PythonVirtualENV/MyTestENV/lib/python2.7/site-packages/django/utils/decorators.py", line 63, in bound_func
+    return func.__get__(self, type(self))(*args2, **kwargs2)
+  File "/usr/local/PythonVirtualENV/MyTestENV/lib/python2.7/site-packages/xadmin/views/base.py", line 78, in method
+    return filter_chain(filters, len(filters) - 1, _inner_method, *args, **kwargs)
+  File "/usr/local/PythonVirtualENV/MyTestENV/lib/python2.7/site-packages/xadmin/views/base.py", line 47, in filter_chain
+    return func()
+  File "/usr/local/PythonVirtualENV/MyTestENV/lib/python2.7/site-packages/xadmin/views/base.py", line 72, in _inner_method
+    return func(self, *args, **kwargs)
+  File "/usr/local/PythonVirtualENV/MyTestENV/lib/python2.7/site-packages/xadmin/views/list.py", line 401, in get
+    response = self.get_result_list()
+  File "/usr/local/PythonVirtualENV/MyTestENV/lib/python2.7/site-packages/xadmin/views/base.py", line 78, in method
+    return filter_chain(filters, len(filters) - 1, _inner_method, *args, **kwargs)
+  File "/usr/local/PythonVirtualENV/MyTestENV/lib/python2.7/site-packages/xadmin/views/base.py", line 47, in filter_chain
+    return func()
+  File "/usr/local/PythonVirtualENV/MyTestENV/lib/python2.7/site-packages/xadmin/views/base.py", line 72, in _inner_method
+    return func(self, *args, **kwargs)
+  File "/usr/local/PythonVirtualENV/MyTestENV/lib/python2.7/site-packages/xadmin/views/list.py", line 200, in get_result_list
+    return self.make_result_list()
+  File "/usr/local/PythonVirtualENV/MyTestENV/lib/python2.7/site-packages/xadmin/views/list.py", line 196, in make_result_list
+    self.list_per_page * self.page_num + len(self.result_list))
+  File "/usr/local/PythonVirtualENV/MyTestENV/lib/python2.7/site-packages/django/db/models/query.py", line 232, in __len__
+    self._fetch_all()
+  File "/usr/local/PythonVirtualENV/MyTestENV/lib/python2.7/site-packages/django/db/models/query.py", line 1118, in _fetch_all
+    self._result_cache = list(self._iterable_class(self))
+  File "/usr/local/PythonVirtualENV/MyTestENV/lib/python2.7/site-packages/django/db/models/query.py", line 53, in __iter__
+    results = compiler.execute_sql(chunked_fetch=self.chunked_fetch)
+  File "/usr/local/PythonVirtualENV/MyTestENV/lib/python2.7/site-packages/django/db/models/sql/compiler.py", line 899, in execute_sql
+    raise original_exception
+OperationalError: (1054, "Unknown column 'asset_host.username' in 'field list'")
+ERROR 2018-04-17 10:43:23,754 exception:handle_uncaught_exception:135 Internal Server Error: /xadmin/asset/hostgroup/
+Traceback (most recent call last):
+  File "/usr/local/PythonVirtualENV/MyTestENV/lib/python2.7/site-packages/django/core/handlers/exception.py", line 41, in inner
+    response = get_response(request)
+  File "/usr/local/PythonVirtualENV/MyTestENV/lib/python2.7/site-packages/django/core/handlers/base.py", line 249, in _legacy_get_response
+    response = self._get_response(request)
+  File "/usr/local/PythonVirtualENV/MyTestENV/lib/python2.7/site-packages/django/core/handlers/base.py", line 187, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/usr/local/PythonVirtualENV/MyTestENV/lib/python2.7/site-packages/django/core/handlers/base.py", line 185, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/usr/local/PythonVirtualENV/MyTestENV/lib/python2.7/site-packages/xadmin/sites.py", line 300, in wrapper
+    return self.admin_view(view, cacheable)(*args, **kwargs)
+  File "/usr/local/PythonVirtualENV/MyTestENV/lib/python2.7/site-packages/django/views/decorators/cache.py", line 57, in _wrapped_view_func
+    response = view_func(request, *args, **kwargs)
+  File "/usr/local/PythonVirtualENV/MyTestENV/lib/python2.7/site-packages/xadmin/sites.py", line 208, in inner
+    return view(request, *args, **kwargs)
+  File "/usr/local/PythonVirtualENV/MyTestENV/lib/python2.7/site-packages/xadmin/views/base.py", line 279, in view
+    return handler(request, *args, **kwargs)
+  File "/usr/local/PythonVirtualENV/MyTestENV/lib/python2.7/site-packages/django/utils/decorators.py", line 67, in _wrapper
+    return bound_func(*args, **kwargs)
+  File "/usr/local/PythonVirtualENV/MyTestENV/lib/python2.7/site-packages/django/utils/decorators.py", line 149, in _wrapped_view
+    response = view_func(request, *args, **kwargs)
+  File "/usr/local/PythonVirtualENV/MyTestENV/lib/python2.7/site-packages/django/utils/decorators.py", line 63, in bound_func
+    return func.__get__(self, type(self))(*args2, **kwargs2)
+  File "/usr/local/PythonVirtualENV/MyTestENV/lib/python2.7/site-packages/xadmin/views/base.py", line 78, in method
+    return filter_chain(filters, len(filters) - 1, _inner_method, *args, **kwargs)
+  File "/usr/local/PythonVirtualENV/MyTestENV/lib/python2.7/site-packages/xadmin/views/base.py", line 47, in filter_chain
+    return func()
+  File "/usr/local/PythonVirtualENV/MyTestENV/lib/python2.7/site-packages/xadmin/views/base.py", line 72, in _inner_method
+    return func(self, *args, **kwargs)
+  File "/usr/local/PythonVirtualENV/MyTestENV/lib/python2.7/site-packages/xadmin/views/list.py", line 401, in get
+    response = self.get_result_list()
+  File "/usr/local/PythonVirtualENV/MyTestENV/lib/python2.7/site-packages/xadmin/views/base.py", line 78, in method
+    return filter_chain(filters, len(filters) - 1, _inner_method, *args, **kwargs)
+  File "/usr/local/PythonVirtualENV/MyTestENV/lib/python2.7/site-packages/xadmin/views/base.py", line 47, in filter_chain
+    return func()
+  File "/usr/local/PythonVirtualENV/MyTestENV/lib/python2.7/site-packages/xadmin/views/base.py", line 72, in _inner_method
+    return func(self, *args, **kwargs)
+  File "/usr/local/PythonVirtualENV/MyTestENV/lib/python2.7/site-packages/xadmin/views/list.py", line 200, in get_result_list
+    return self.make_result_list()
+  File "/usr/local/PythonVirtualENV/MyTestENV/lib/python2.7/site-packages/xadmin/views/list.py", line 177, in make_result_list
+    self.result_count = self.paginator.count
+  File "/usr/local/PythonVirtualENV/MyTestENV/lib/python2.7/site-packages/django/utils/functional.py", line 35, in __get__
+    res = instance.__dict__[self.name] = self.func(instance)
+  File "/usr/local/PythonVirtualENV/MyTestENV/lib/python2.7/site-packages/django/core/paginator.py", line 79, in count
+    return self.object_list.count()
+  File "/usr/local/PythonVirtualENV/MyTestENV/lib/python2.7/site-packages/django/db/models/query.py", line 364, in count
+    return self.query.get_count(using=self.db)
+  File "/usr/local/PythonVirtualENV/MyTestENV/lib/python2.7/site-packages/django/db/models/sql/query.py", line 499, in get_count
+    number = obj.get_aggregation(using, ['__count'])['__count']
+  File "/usr/local/PythonVirtualENV/MyTestENV/lib/python2.7/site-packages/django/db/models/sql/query.py", line 480, in get_aggregation
+    result = compiler.execute_sql(SINGLE)
+  File "/usr/local/PythonVirtualENV/MyTestENV/lib/python2.7/site-packages/django/db/models/sql/compiler.py", line 899, in execute_sql
+    raise original_exception
+ProgrammingError: (1146, "Table 'jdops.asset_hostgroup' doesn't exist")
+ERROR 2018-04-17 10:55:09,694 exception:handle_uncaught_exception:135 Internal Server Error: /xadmin/asset/host/
+Traceback (most recent call last):
+  File "/usr/local/PythonVirtualENV/MyTestENV/lib/python2.7/site-packages/django/core/handlers/exception.py", line 41, in inner
+    response = get_response(request)
+  File "/usr/local/PythonVirtualENV/MyTestENV/lib/python2.7/site-packages/django/core/handlers/base.py", line 249, in _legacy_get_response
+    response = self._get_response(request)
+  File "/usr/local/PythonVirtualENV/MyTestENV/lib/python2.7/site-packages/django/core/handlers/base.py", line 187, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/usr/local/PythonVirtualENV/MyTestENV/lib/python2.7/site-packages/django/core/handlers/base.py", line 185, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/usr/local/PythonVirtualENV/MyTestENV/lib/python2.7/site-packages/xadmin/sites.py", line 300, in wrapper
+    return self.admin_view(view, cacheable)(*args, **kwargs)
+  File "/usr/local/PythonVirtualENV/MyTestENV/lib/python2.7/site-packages/django/views/decorators/cache.py", line 57, in _wrapped_view_func
+    response = view_func(request, *args, **kwargs)
+  File "/usr/local/PythonVirtualENV/MyTestENV/lib/python2.7/site-packages/xadmin/sites.py", line 208, in inner
+    return view(request, *args, **kwargs)
+  File "/usr/local/PythonVirtualENV/MyTestENV/lib/python2.7/site-packages/xadmin/views/base.py", line 279, in view
+    return handler(request, *args, **kwargs)
+  File "/usr/local/PythonVirtualENV/MyTestENV/lib/python2.7/site-packages/django/utils/decorators.py", line 67, in _wrapper
+    return bound_func(*args, **kwargs)
+  File "/usr/local/PythonVirtualENV/MyTestENV/lib/python2.7/site-packages/django/utils/decorators.py", line 149, in _wrapped_view
+    response = view_func(request, *args, **kwargs)
+  File "/usr/local/PythonVirtualENV/MyTestENV/lib/python2.7/site-packages/django/utils/decorators.py", line 63, in bound_func
+    return func.__get__(self, type(self))(*args2, **kwargs2)
+  File "/usr/local/PythonVirtualENV/MyTestENV/lib/python2.7/site-packages/xadmin/views/base.py", line 78, in method
+    return filter_chain(filters, len(filters) - 1, _inner_method, *args, **kwargs)
+  File "/usr/local/PythonVirtualENV/MyTestENV/lib/python2.7/site-packages/xadmin/views/base.py", line 47, in filter_chain
+    return func()
+  File "/usr/local/PythonVirtualENV/MyTestENV/lib/python2.7/site-packages/xadmin/views/base.py", line 72, in _inner_method
+    return func(self, *args, **kwargs)
+  File "/usr/local/PythonVirtualENV/MyTestENV/lib/python2.7/site-packages/xadmin/views/list.py", line 401, in get
+    response = self.get_result_list()
+  File "/usr/local/PythonVirtualENV/MyTestENV/lib/python2.7/site-packages/xadmin/views/base.py", line 78, in method
+    return filter_chain(filters, len(filters) - 1, _inner_method, *args, **kwargs)
+  File "/usr/local/PythonVirtualENV/MyTestENV/lib/python2.7/site-packages/xadmin/views/base.py", line 47, in filter_chain
+    return func()
+  File "/usr/local/PythonVirtualENV/MyTestENV/lib/python2.7/site-packages/xadmin/views/base.py", line 72, in _inner_method
+    return func(self, *args, **kwargs)
+  File "/usr/local/PythonVirtualENV/MyTestENV/lib/python2.7/site-packages/xadmin/views/list.py", line 200, in get_result_list
+    return self.make_result_list()
+  File "/usr/local/PythonVirtualENV/MyTestENV/lib/python2.7/site-packages/xadmin/views/list.py", line 177, in make_result_list
+    self.result_count = self.paginator.count
+  File "/usr/local/PythonVirtualENV/MyTestENV/lib/python2.7/site-packages/django/utils/functional.py", line 35, in __get__
+    res = instance.__dict__[self.name] = self.func(instance)
+  File "/usr/local/PythonVirtualENV/MyTestENV/lib/python2.7/site-packages/django/core/paginator.py", line 79, in count
+    return self.object_list.count()
+  File "/usr/local/PythonVirtualENV/MyTestENV/lib/python2.7/site-packages/django/db/models/query.py", line 364, in count
+    return self.query.get_count(using=self.db)
+  File "/usr/local/PythonVirtualENV/MyTestENV/lib/python2.7/site-packages/django/db/models/sql/query.py", line 499, in get_count
+    number = obj.get_aggregation(using, ['__count'])['__count']
+  File "/usr/local/PythonVirtualENV/MyTestENV/lib/python2.7/site-packages/django/db/models/sql/query.py", line 480, in get_aggregation
+    result = compiler.execute_sql(SINGLE)
+  File "/usr/local/PythonVirtualENV/MyTestENV/lib/python2.7/site-packages/django/db/models/sql/compiler.py", line 899, in execute_sql
+    raise original_exception
+ProgrammingError: (1146, "Table 'jdops.asset_host' doesn't exist")
+ERROR 2018-04-17 10:59:21,645 exception:handle_uncaught_exception:135 Internal Server Error: /xadmin/asset/host/
+Traceback (most recent call last):
+  File "/usr/local/PythonVirtualENV/MyTestENV/lib/python2.7/site-packages/django/core/handlers/exception.py", line 41, in inner
+    response = get_response(request)
+  File "/usr/local/PythonVirtualENV/MyTestENV/lib/python2.7/site-packages/django/core/handlers/base.py", line 249, in _legacy_get_response
+    response = self._get_response(request)
+  File "/usr/local/PythonVirtualENV/MyTestENV/lib/python2.7/site-packages/django/core/handlers/base.py", line 187, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/usr/local/PythonVirtualENV/MyTestENV/lib/python2.7/site-packages/django/core/handlers/base.py", line 185, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/usr/local/PythonVirtualENV/MyTestENV/lib/python2.7/site-packages/xadmin/sites.py", line 300, in wrapper
+    return self.admin_view(view, cacheable)(*args, **kwargs)
+  File "/usr/local/PythonVirtualENV/MyTestENV/lib/python2.7/site-packages/django/views/decorators/cache.py", line 57, in _wrapped_view_func
+    response = view_func(request, *args, **kwargs)
+  File "/usr/local/PythonVirtualENV/MyTestENV/lib/python2.7/site-packages/xadmin/sites.py", line 208, in inner
+    return view(request, *args, **kwargs)
+  File "/usr/local/PythonVirtualENV/MyTestENV/lib/python2.7/site-packages/xadmin/views/base.py", line 279, in view
+    return handler(request, *args, **kwargs)
+  File "/usr/local/PythonVirtualENV/MyTestENV/lib/python2.7/site-packages/django/utils/decorators.py", line 67, in _wrapper
+    return bound_func(*args, **kwargs)
+  File "/usr/local/PythonVirtualENV/MyTestENV/lib/python2.7/site-packages/django/utils/decorators.py", line 149, in _wrapped_view
+    response = view_func(request, *args, **kwargs)
+  File "/usr/local/PythonVirtualENV/MyTestENV/lib/python2.7/site-packages/django/utils/decorators.py", line 63, in bound_func
+    return func.__get__(self, type(self))(*args2, **kwargs2)
+  File "/usr/local/PythonVirtualENV/MyTestENV/lib/python2.7/site-packages/xadmin/views/base.py", line 78, in method
+    return filter_chain(filters, len(filters) - 1, _inner_method, *args, **kwargs)
+  File "/usr/local/PythonVirtualENV/MyTestENV/lib/python2.7/site-packages/xadmin/views/base.py", line 47, in filter_chain
+    return func()
+  File "/usr/local/PythonVirtualENV/MyTestENV/lib/python2.7/site-packages/xadmin/views/base.py", line 72, in _inner_method
+    return func(self, *args, **kwargs)
+  File "/usr/local/PythonVirtualENV/MyTestENV/lib/python2.7/site-packages/xadmin/views/list.py", line 401, in get
+    response = self.get_result_list()
+  File "/usr/local/PythonVirtualENV/MyTestENV/lib/python2.7/site-packages/xadmin/views/base.py", line 78, in method
+    return filter_chain(filters, len(filters) - 1, _inner_method, *args, **kwargs)
+  File "/usr/local/PythonVirtualENV/MyTestENV/lib/python2.7/site-packages/xadmin/views/base.py", line 47, in filter_chain
+    return func()
+  File "/usr/local/PythonVirtualENV/MyTestENV/lib/python2.7/site-packages/xadmin/views/base.py", line 72, in _inner_method
+    return func(self, *args, **kwargs)
+  File "/usr/local/PythonVirtualENV/MyTestENV/lib/python2.7/site-packages/xadmin/views/list.py", line 200, in get_result_list
+    return self.make_result_list()
+  File "/usr/local/PythonVirtualENV/MyTestENV/lib/python2.7/site-packages/xadmin/views/list.py", line 177, in make_result_list
+    self.result_count = self.paginator.count
+  File "/usr/local/PythonVirtualENV/MyTestENV/lib/python2.7/site-packages/django/utils/functional.py", line 35, in __get__
+    res = instance.__dict__[self.name] = self.func(instance)
+  File "/usr/local/PythonVirtualENV/MyTestENV/lib/python2.7/site-packages/django/core/paginator.py", line 79, in count
+    return self.object_list.count()
+  File "/usr/local/PythonVirtualENV/MyTestENV/lib/python2.7/site-packages/django/db/models/query.py", line 364, in count
+    return self.query.get_count(using=self.db)
+  File "/usr/local/PythonVirtualENV/MyTestENV/lib/python2.7/site-packages/django/db/models/sql/query.py", line 499, in get_count
+    number = obj.get_aggregation(using, ['__count'])['__count']
+  File "/usr/local/PythonVirtualENV/MyTestENV/lib/python2.7/site-packages/django/db/models/sql/query.py", line 480, in get_aggregation
+    result = compiler.execute_sql(SINGLE)
+  File "/usr/local/PythonVirtualENV/MyTestENV/lib/python2.7/site-packages/django/db/models/sql/compiler.py", line 899, in execute_sql
+    raise original_exception
+ProgrammingError: (1146, "Table 'jdops.asset_host' doesn't exist")
+ERROR 2018-04-17 11:10:33,614 exception:handle_uncaught_exception:135 Internal Server Error: /xadmin/
+Traceback (most recent call last):
+  File "/usr/local/PythonVirtualENV/MyTestENV/lib/python2.7/site-packages/django/core/handlers/exception.py", line 41, in inner
+    response = get_response(request)
+  File "/usr/local/PythonVirtualENV/MyTestENV/lib/python2.7/site-packages/django/core/handlers/base.py", line 249, in _legacy_get_response
+    response = self._get_response(request)
+  File "/usr/local/PythonVirtualENV/MyTestENV/lib/python2.7/site-packages/django/core/handlers/base.py", line 187, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/usr/local/PythonVirtualENV/MyTestENV/lib/python2.7/site-packages/django/core/handlers/base.py", line 185, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/usr/local/PythonVirtualENV/MyTestENV/lib/python2.7/site-packages/xadmin/sites.py", line 300, in wrapper
+    return self.admin_view(view, cacheable)(*args, **kwargs)
+  File "/usr/local/PythonVirtualENV/MyTestENV/lib/python2.7/site-packages/django/views/decorators/cache.py", line 57, in _wrapped_view_func
+    response = view_func(request, *args, **kwargs)
+  File "/usr/local/PythonVirtualENV/MyTestENV/lib/python2.7/site-packages/xadmin/sites.py", line 206, in inner
+    if not self.has_permission(request) and getattr(view, 'need_site_permission', True):
+  File "/usr/local/PythonVirtualENV/MyTestENV/lib/python2.7/site-packages/xadmin/sites.py", line 161, in has_permission
+    return request.user.is_active and request.user.is_staff
+  File "/usr/local/PythonVirtualENV/MyTestENV/lib/python2.7/site-packages/django/utils/functional.py", line 238, in inner
+    self._setup()
+  File "/usr/local/PythonVirtualENV/MyTestENV/lib/python2.7/site-packages/django/utils/functional.py", line 386, in _setup
+    self._wrapped = self._setupfunc()
+  File "/usr/local/PythonVirtualENV/MyTestENV/lib/python2.7/site-packages/django/contrib/auth/middleware.py", line 24, in <lambda>
+    request.user = SimpleLazyObject(lambda: get_user(request))
+  File "/usr/local/PythonVirtualENV/MyTestENV/lib/python2.7/site-packages/django/contrib/auth/middleware.py", line 12, in get_user
+    request._cached_user = auth.get_user(request)
+  File "/usr/local/PythonVirtualENV/MyTestENV/lib/python2.7/site-packages/django/contrib/auth/__init__.py", line 211, in get_user
+    user_id = _get_user_session_key(request)
+  File "/usr/local/PythonVirtualENV/MyTestENV/lib/python2.7/site-packages/django/contrib/auth/__init__.py", line 61, in _get_user_session_key
+    return get_user_model()._meta.pk.to_python(request.session[SESSION_KEY])
+  File "/usr/local/PythonVirtualENV/MyTestENV/lib/python2.7/site-packages/django/contrib/sessions/backends/base.py", line 57, in __getitem__
+    return self._session[key]
+  File "/usr/local/PythonVirtualENV/MyTestENV/lib/python2.7/site-packages/django/contrib/sessions/backends/base.py", line 207, in _get_session
+    self._session_cache = self.load()
+  File "/usr/local/PythonVirtualENV/MyTestENV/lib/python2.7/site-packages/django/contrib/sessions/backends/db.py", line 35, in load
+    expire_date__gt=timezone.now()
+  File "/usr/local/PythonVirtualENV/MyTestENV/lib/python2.7/site-packages/django/db/models/manager.py", line 85, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "/usr/local/PythonVirtualENV/MyTestENV/lib/python2.7/site-packages/django/db/models/query.py", line 374, in get
+    num = len(clone)
+  File "/usr/local/PythonVirtualENV/MyTestENV/lib/python2.7/site-packages/django/db/models/query.py", line 232, in __len__
+    self._fetch_all()
+  File "/usr/local/PythonVirtualENV/MyTestENV/lib/python2.7/site-packages/django/db/models/query.py", line 1118, in _fetch_all
+    self._result_cache = list(self._iterable_class(self))
+  File "/usr/local/PythonVirtualENV/MyTestENV/lib/python2.7/site-packages/django/db/models/query.py", line 53, in __iter__
+    results = compiler.execute_sql(chunked_fetch=self.chunked_fetch)
+  File "/usr/local/PythonVirtualENV/MyTestENV/lib/python2.7/site-packages/django/db/models/sql/compiler.py", line 899, in execute_sql
+    raise original_exception
+ProgrammingError: (1146, "Table 'jdops.django_session' doesn't exist")
+ERROR 2018-04-17 13:31:20,252 exception:handle_uncaught_exception:135 Internal Server Error: /xadmin/asset/service/
+Traceback (most recent call last):
+  File "/usr/local/PythonVirtualENV/MyTestENV/lib/python2.7/site-packages/django/core/handlers/exception.py", line 41, in inner
+    response = get_response(request)
+  File "/usr/local/PythonVirtualENV/MyTestENV/lib/python2.7/site-packages/django/core/handlers/base.py", line 249, in _legacy_get_response
+    response = self._get_response(request)
+  File "/usr/local/PythonVirtualENV/MyTestENV/lib/python2.7/site-packages/django/core/handlers/base.py", line 187, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/usr/local/PythonVirtualENV/MyTestENV/lib/python2.7/site-packages/django/core/handlers/base.py", line 185, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/usr/local/PythonVirtualENV/MyTestENV/lib/python2.7/site-packages/xadmin/sites.py", line 300, in wrapper
+    return self.admin_view(view, cacheable)(*args, **kwargs)
+  File "/usr/local/PythonVirtualENV/MyTestENV/lib/python2.7/site-packages/django/views/decorators/cache.py", line 57, in _wrapped_view_func
+    response = view_func(request, *args, **kwargs)
+  File "/usr/local/PythonVirtualENV/MyTestENV/lib/python2.7/site-packages/xadmin/sites.py", line 208, in inner
+    return view(request, *args, **kwargs)
+  File "/usr/local/PythonVirtualENV/MyTestENV/lib/python2.7/site-packages/xadmin/views/base.py", line 279, in view
+    return handler(request, *args, **kwargs)
+  File "/usr/local/PythonVirtualENV/MyTestENV/lib/python2.7/site-packages/django/utils/decorators.py", line 67, in _wrapper
+    return bound_func(*args, **kwargs)
+  File "/usr/local/PythonVirtualENV/MyTestENV/lib/python2.7/site-packages/django/utils/decorators.py", line 149, in _wrapped_view
+    response = view_func(request, *args, **kwargs)
+  File "/usr/local/PythonVirtualENV/MyTestENV/lib/python2.7/site-packages/django/utils/decorators.py", line 63, in bound_func
+    return func.__get__(self, type(self))(*args2, **kwargs2)
+  File "/usr/local/PythonVirtualENV/MyTestENV/lib/python2.7/site-packages/xadmin/views/base.py", line 78, in method
+    return filter_chain(filters, len(filters) - 1, _inner_method, *args, **kwargs)
+  File "/usr/local/PythonVirtualENV/MyTestENV/lib/python2.7/site-packages/xadmin/views/base.py", line 47, in filter_chain
+    return func()
+  File "/usr/local/PythonVirtualENV/MyTestENV/lib/python2.7/site-packages/xadmin/views/base.py", line 72, in _inner_method
+    return func(self, *args, **kwargs)
+  File "/usr/local/PythonVirtualENV/MyTestENV/lib/python2.7/site-packages/xadmin/views/list.py", line 405, in get
+    context = self.get_context()
+  File "/usr/local/PythonVirtualENV/MyTestENV/lib/python2.7/site-packages/xadmin/views/base.py", line 78, in method
+    return filter_chain(filters, len(filters) - 1, _inner_method, *args, **kwargs)
+  File "/usr/local/PythonVirtualENV/MyTestENV/lib/python2.7/site-packages/xadmin/views/base.py", line 61, in filter_chain
+    return filter_chain(filters, token - 1, _inner_method, *args, **kwargs)
+  File "/usr/local/PythonVirtualENV/MyTestENV/lib/python2.7/site-packages/xadmin/views/base.py", line 61, in filter_chain
+    return filter_chain(filters, token - 1, _inner_method, *args, **kwargs)
+  File "/usr/local/PythonVirtualENV/MyTestENV/lib/python2.7/site-packages/xadmin/views/base.py", line 61, in filter_chain
+    return filter_chain(filters, token - 1, _inner_method, *args, **kwargs)
+  File "/usr/local/PythonVirtualENV/MyTestENV/lib/python2.7/site-packages/xadmin/views/base.py", line 47, in filter_chain
+    return func()
+  File "/usr/local/PythonVirtualENV/MyTestENV/lib/python2.7/site-packages/xadmin/views/base.py", line 60, in _inner_method
+    return fm(func if fargs[1] == '__' else func(), *args, **kwargs)
+  File "/usr/local/PythonVirtualENV/MyTestENV/lib/python2.7/site-packages/xadmin/views/base.py", line 60, in _inner_method
+    return fm(func if fargs[1] == '__' else func(), *args, **kwargs)
+  File "/usr/local/PythonVirtualENV/MyTestENV/lib/python2.7/site-packages/xadmin/views/base.py", line 60, in _inner_method
+    return fm(func if fargs[1] == '__' else func(), *args, **kwargs)
+  File "/usr/local/PythonVirtualENV/MyTestENV/lib/python2.7/site-packages/xadmin/views/base.py", line 72, in _inner_method
+    return func(self, *args, **kwargs)
+  File "/usr/local/PythonVirtualENV/MyTestENV/lib/python2.7/site-packages/xadmin/views/list.py", line 384, in get_context
+    'result_headers': self.result_headers(),
+  File "/usr/local/PythonVirtualENV/MyTestENV/lib/python2.7/site-packages/xadmin/views/base.py", line 78, in method
+    return filter_chain(filters, len(filters) - 1, _inner_method, *args, **kwargs)
+  File "/usr/local/PythonVirtualENV/MyTestENV/lib/python2.7/site-packages/xadmin/views/base.py", line 47, in filter_chain
+    return func()
+  File "/usr/local/PythonVirtualENV/MyTestENV/lib/python2.7/site-packages/xadmin/views/base.py", line 72, in _inner_method
+    return func(self, *args, **kwargs)
+  File "/usr/local/PythonVirtualENV/MyTestENV/lib/python2.7/site-packages/xadmin/views/list.py", line 524, in result_headers
+    field_name, row) for field_name in self.list_display]
+  File "/usr/local/PythonVirtualENV/MyTestENV/lib/python2.7/site-packages/xadmin/views/base.py", line 78, in method
+    return filter_chain(filters, len(filters) - 1, _inner_method, *args, **kwargs)
+  File "/usr/local/PythonVirtualENV/MyTestENV/lib/python2.7/site-packages/xadmin/views/base.py", line 61, in filter_chain
+    return filter_chain(filters, token - 1, _inner_method, *args, **kwargs)
+  File "/usr/local/PythonVirtualENV/MyTestENV/lib/python2.7/site-packages/xadmin/views/base.py", line 47, in filter_chain
+    return func()
+  File "/usr/local/PythonVirtualENV/MyTestENV/lib/python2.7/site-packages/xadmin/views/base.py", line 60, in _inner_method
+    return fm(func if fargs[1] == '__' else func(), *args, **kwargs)
+  File "/usr/local/PythonVirtualENV/MyTestENV/lib/python2.7/site-packages/xadmin/views/base.py", line 72, in _inner_method
+    return func(self, *args, **kwargs)
+  File "/usr/local/PythonVirtualENV/MyTestENV/lib/python2.7/site-packages/xadmin/views/list.py", line 441, in result_header
+    return_attr=True
+  File "/usr/local/PythonVirtualENV/MyTestENV/lib/python2.7/site-packages/django/contrib/admin/utils.py", line 364, in label_for_field
+    raise AttributeError(message)
+AttributeError: Unable to lookup 'port' on Service or assetserviceAdminListAdminViewModelAdminViewGlobalSettingsCommAdminViewBaseAdminViewBaseAdminObjectViewobject
+ERROR 2018-04-17 13:32:29,094 exception:handle_uncaught_exception:135 Internal Server Error: /xadmin/asset/service/
+Traceback (most recent call last):
+  File "/usr/local/PythonVirtualENV/MyTestENV/lib/python2.7/site-packages/django/core/handlers/exception.py", line 41, in inner
+    response = get_response(request)
+  File "/usr/local/PythonVirtualENV/MyTestENV/lib/python2.7/site-packages/django/core/handlers/base.py", line 249, in _legacy_get_response
+    response = self._get_response(request)
+  File "/usr/local/PythonVirtualENV/MyTestENV/lib/python2.7/site-packages/django/core/handlers/base.py", line 187, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/usr/local/PythonVirtualENV/MyTestENV/lib/python2.7/site-packages/django/core/handlers/base.py", line 185, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/usr/local/PythonVirtualENV/MyTestENV/lib/python2.7/site-packages/xadmin/sites.py", line 300, in wrapper
+    return self.admin_view(view, cacheable)(*args, **kwargs)
+  File "/usr/local/PythonVirtualENV/MyTestENV/lib/python2.7/site-packages/django/views/decorators/cache.py", line 57, in _wrapped_view_func
+    response = view_func(request, *args, **kwargs)
+  File "/usr/local/PythonVirtualENV/MyTestENV/lib/python2.7/site-packages/xadmin/sites.py", line 208, in inner
+    return view(request, *args, **kwargs)
+  File "/usr/local/PythonVirtualENV/MyTestENV/lib/python2.7/site-packages/xadmin/views/base.py", line 279, in view
+    return handler(request, *args, **kwargs)
+  File "/usr/local/PythonVirtualENV/MyTestENV/lib/python2.7/site-packages/django/utils/decorators.py", line 67, in _wrapper
+    return bound_func(*args, **kwargs)
+  File "/usr/local/PythonVirtualENV/MyTestENV/lib/python2.7/site-packages/django/utils/decorators.py", line 149, in _wrapped_view
+    response = view_func(request, *args, **kwargs)
+  File "/usr/local/PythonVirtualENV/MyTestENV/lib/python2.7/site-packages/django/utils/decorators.py", line 63, in bound_func
+    return func.__get__(self, type(self))(*args2, **kwargs2)
+  File "/usr/local/PythonVirtualENV/MyTestENV/lib/python2.7/site-packages/xadmin/views/base.py", line 78, in method
+    return filter_chain(filters, len(filters) - 1, _inner_method, *args, **kwargs)
+  File "/usr/local/PythonVirtualENV/MyTestENV/lib/python2.7/site-packages/xadmin/views/base.py", line 47, in filter_chain
+    return func()
+  File "/usr/local/PythonVirtualENV/MyTestENV/lib/python2.7/site-packages/xadmin/views/base.py", line 72, in _inner_method
+    return func(self, *args, **kwargs)
+  File "/usr/local/PythonVirtualENV/MyTestENV/lib/python2.7/site-packages/xadmin/views/list.py", line 405, in get
+    context = self.get_context()
+  File "/usr/local/PythonVirtualENV/MyTestENV/lib/python2.7/site-packages/xadmin/views/base.py", line 78, in method
+    return filter_chain(filters, len(filters) - 1, _inner_method, *args, **kwargs)
+  File "/usr/local/PythonVirtualENV/MyTestENV/lib/python2.7/site-packages/xadmin/views/base.py", line 61, in filter_chain
+    return filter_chain(filters, token - 1, _inner_method, *args, **kwargs)
+  File "/usr/local/PythonVirtualENV/MyTestENV/lib/python2.7/site-packages/xadmin/views/base.py", line 61, in filter_chain
+    return filter_chain(filters, token - 1, _inner_method, *args, **kwargs)
+  File "/usr/local/PythonVirtualENV/MyTestENV/lib/python2.7/site-packages/xadmin/views/base.py", line 61, in filter_chain
+    return filter_chain(filters, token - 1, _inner_method, *args, **kwargs)
+  File "/usr/local/PythonVirtualENV/MyTestENV/lib/python2.7/site-packages/xadmin/views/base.py", line 47, in filter_chain
+    return func()
+  File "/usr/local/PythonVirtualENV/MyTestENV/lib/python2.7/site-packages/xadmin/views/base.py", line 60, in _inner_method
+    return fm(func if fargs[1] == '__' else func(), *args, **kwargs)
+  File "/usr/local/PythonVirtualENV/MyTestENV/lib/python2.7/site-packages/xadmin/views/base.py", line 60, in _inner_method
+    return fm(func if fargs[1] == '__' else func(), *args, **kwargs)
+  File "/usr/local/PythonVirtualENV/MyTestENV/lib/python2.7/site-packages/xadmin/views/base.py", line 60, in _inner_method
+    return fm(func if fargs[1] == '__' else func(), *args, **kwargs)
+  File "/usr/local/PythonVirtualENV/MyTestENV/lib/python2.7/site-packages/xadmin/views/base.py", line 72, in _inner_method
+    return func(self, *args, **kwargs)
+  File "/usr/local/PythonVirtualENV/MyTestENV/lib/python2.7/site-packages/xadmin/views/list.py", line 384, in get_context
+    'result_headers': self.result_headers(),
+  File "/usr/local/PythonVirtualENV/MyTestENV/lib/python2.7/site-packages/xadmin/views/base.py", line 78, in method
+    return filter_chain(filters, len(filters) - 1, _inner_method, *args, **kwargs)
+  File "/usr/local/PythonVirtualENV/MyTestENV/lib/python2.7/site-packages/xadmin/views/base.py", line 47, in filter_chain
+    return func()
+  File "/usr/local/PythonVirtualENV/MyTestENV/lib/python2.7/site-packages/xadmin/views/base.py", line 72, in _inner_method
+    return func(self, *args, **kwargs)
+  File "/usr/local/PythonVirtualENV/MyTestENV/lib/python2.7/site-packages/xadmin/views/list.py", line 524, in result_headers
+    field_name, row) for field_name in self.list_display]
+  File "/usr/local/PythonVirtualENV/MyTestENV/lib/python2.7/site-packages/xadmin/views/base.py", line 78, in method
+    return filter_chain(filters, len(filters) - 1, _inner_method, *args, **kwargs)
+  File "/usr/local/PythonVirtualENV/MyTestENV/lib/python2.7/site-packages/xadmin/views/base.py", line 61, in filter_chain
+    return filter_chain(filters, token - 1, _inner_method, *args, **kwargs)
+  File "/usr/local/PythonVirtualENV/MyTestENV/lib/python2.7/site-packages/xadmin/views/base.py", line 47, in filter_chain
+    return func()
+  File "/usr/local/PythonVirtualENV/MyTestENV/lib/python2.7/site-packages/xadmin/views/base.py", line 60, in _inner_method
+    return fm(func if fargs[1] == '__' else func(), *args, **kwargs)
+  File "/usr/local/PythonVirtualENV/MyTestENV/lib/python2.7/site-packages/xadmin/views/base.py", line 72, in _inner_method
+    return func(self, *args, **kwargs)
+  File "/usr/local/PythonVirtualENV/MyTestENV/lib/python2.7/site-packages/xadmin/views/list.py", line 441, in result_header
+    return_attr=True
+  File "/usr/local/PythonVirtualENV/MyTestENV/lib/python2.7/site-packages/django/contrib/admin/utils.py", line 364, in label_for_field
+    raise AttributeError(message)
+AttributeError: Unable to lookup 'port' on Service or assetserviceAdminListAdminViewModelAdminViewGlobalSettingsCommAdminViewBaseAdminViewBaseAdminObjectViewobject
+ERROR 2018-04-17 13:32:36,327 exception:handle_uncaught_exception:135 Internal Server Error: /xadmin/asset/service/
+Traceback (most recent call last):
+  File "/usr/local/PythonVirtualENV/MyTestENV/lib/python2.7/site-packages/django/core/handlers/exception.py", line 41, in inner
+    response = get_response(request)
+  File "/usr/local/PythonVirtualENV/MyTestENV/lib/python2.7/site-packages/django/core/handlers/base.py", line 249, in _legacy_get_response
+    response = self._get_response(request)
+  File "/usr/local/PythonVirtualENV/MyTestENV/lib/python2.7/site-packages/django/core/handlers/base.py", line 187, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/usr/local/PythonVirtualENV/MyTestENV/lib/python2.7/site-packages/django/core/handlers/base.py", line 185, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/usr/local/PythonVirtualENV/MyTestENV/lib/python2.7/site-packages/xadmin/sites.py", line 300, in wrapper
+    return self.admin_view(view, cacheable)(*args, **kwargs)
+  File "/usr/local/PythonVirtualENV/MyTestENV/lib/python2.7/site-packages/django/views/decorators/cache.py", line 57, in _wrapped_view_func
+    response = view_func(request, *args, **kwargs)
+  File "/usr/local/PythonVirtualENV/MyTestENV/lib/python2.7/site-packages/xadmin/sites.py", line 208, in inner
+    return view(request, *args, **kwargs)
+  File "/usr/local/PythonVirtualENV/MyTestENV/lib/python2.7/site-packages/xadmin/views/base.py", line 279, in view
+    return handler(request, *args, **kwargs)
+  File "/usr/local/PythonVirtualENV/MyTestENV/lib/python2.7/site-packages/django/utils/decorators.py", line 67, in _wrapper
+    return bound_func(*args, **kwargs)
+  File "/usr/local/PythonVirtualENV/MyTestENV/lib/python2.7/site-packages/django/utils/decorators.py", line 149, in _wrapped_view
+    response = view_func(request, *args, **kwargs)
+  File "/usr/local/PythonVirtualENV/MyTestENV/lib/python2.7/site-packages/django/utils/decorators.py", line 63, in bound_func
+    return func.__get__(self, type(self))(*args2, **kwargs2)
+  File "/usr/local/PythonVirtualENV/MyTestENV/lib/python2.7/site-packages/xadmin/views/base.py", line 78, in method
+    return filter_chain(filters, len(filters) - 1, _inner_method, *args, **kwargs)
+  File "/usr/local/PythonVirtualENV/MyTestENV/lib/python2.7/site-packages/xadmin/views/base.py", line 47, in filter_chain
+    return func()
+  File "/usr/local/PythonVirtualENV/MyTestENV/lib/python2.7/site-packages/xadmin/views/base.py", line 72, in _inner_method
+    return func(self, *args, **kwargs)
+  File "/usr/local/PythonVirtualENV/MyTestENV/lib/python2.7/site-packages/xadmin/views/list.py", line 405, in get
+    context = self.get_context()
+  File "/usr/local/PythonVirtualENV/MyTestENV/lib/python2.7/site-packages/xadmin/views/base.py", line 78, in method
+    return filter_chain(filters, len(filters) - 1, _inner_method, *args, **kwargs)
+  File "/usr/local/PythonVirtualENV/MyTestENV/lib/python2.7/site-packages/xadmin/views/base.py", line 61, in filter_chain
+    return filter_chain(filters, token - 1, _inner_method, *args, **kwargs)
+  File "/usr/local/PythonVirtualENV/MyTestENV/lib/python2.7/site-packages/xadmin/views/base.py", line 61, in filter_chain
+    return filter_chain(filters, token - 1, _inner_method, *args, **kwargs)
+  File "/usr/local/PythonVirtualENV/MyTestENV/lib/python2.7/site-packages/xadmin/views/base.py", line 61, in filter_chain
+    return filter_chain(filters, token - 1, _inner_method, *args, **kwargs)
+  File "/usr/local/PythonVirtualENV/MyTestENV/lib/python2.7/site-packages/xadmin/views/base.py", line 47, in filter_chain
+    return func()
+  File "/usr/local/PythonVirtualENV/MyTestENV/lib/python2.7/site-packages/xadmin/views/base.py", line 60, in _inner_method
+    return fm(func if fargs[1] == '__' else func(), *args, **kwargs)
+  File "/usr/local/PythonVirtualENV/MyTestENV/lib/python2.7/site-packages/xadmin/views/base.py", line 60, in _inner_method
+    return fm(func if fargs[1] == '__' else func(), *args, **kwargs)
+  File "/usr/local/PythonVirtualENV/MyTestENV/lib/python2.7/site-packages/xadmin/views/base.py", line 60, in _inner_method
+    return fm(func if fargs[1] == '__' else func(), *args, **kwargs)
+  File "/usr/local/PythonVirtualENV/MyTestENV/lib/python2.7/site-packages/xadmin/views/base.py", line 72, in _inner_method
+    return func(self, *args, **kwargs)
+  File "/usr/local/PythonVirtualENV/MyTestENV/lib/python2.7/site-packages/xadmin/views/list.py", line 384, in get_context
+    'result_headers': self.result_headers(),
+  File "/usr/local/PythonVirtualENV/MyTestENV/lib/python2.7/site-packages/xadmin/views/base.py", line 78, in method
+    return filter_chain(filters, len(filters) - 1, _inner_method, *args, **kwargs)
+  File "/usr/local/PythonVirtualENV/MyTestENV/lib/python2.7/site-packages/xadmin/views/base.py", line 47, in filter_chain
+    return func()
+  File "/usr/local/PythonVirtualENV/MyTestENV/lib/python2.7/site-packages/xadmin/views/base.py", line 72, in _inner_method
+    return func(self, *args, **kwargs)
+  File "/usr/local/PythonVirtualENV/MyTestENV/lib/python2.7/site-packages/xadmin/views/list.py", line 524, in result_headers
+    field_name, row) for field_name in self.list_display]
+  File "/usr/local/PythonVirtualENV/MyTestENV/lib/python2.7/site-packages/xadmin/views/base.py", line 78, in method
+    return filter_chain(filters, len(filters) - 1, _inner_method, *args, **kwargs)
+  File "/usr/local/PythonVirtualENV/MyTestENV/lib/python2.7/site-packages/xadmin/views/base.py", line 61, in filter_chain
+    return filter_chain(filters, token - 1, _inner_method, *args, **kwargs)
+  File "/usr/local/PythonVirtualENV/MyTestENV/lib/python2.7/site-packages/xadmin/views/base.py", line 47, in filter_chain
+    return func()
+  File "/usr/local/PythonVirtualENV/MyTestENV/lib/python2.7/site-packages/xadmin/views/base.py", line 60, in _inner_method
+    return fm(func if fargs[1] == '__' else func(), *args, **kwargs)
+  File "/usr/local/PythonVirtualENV/MyTestENV/lib/python2.7/site-packages/xadmin/views/base.py", line 72, in _inner_method
+    return func(self, *args, **kwargs)
+  File "/usr/local/PythonVirtualENV/MyTestENV/lib/python2.7/site-packages/xadmin/views/list.py", line 441, in result_header
+    return_attr=True
+  File "/usr/local/PythonVirtualENV/MyTestENV/lib/python2.7/site-packages/django/contrib/admin/utils.py", line 364, in label_for_field
+    raise AttributeError(message)
+AttributeError: Unable to lookup 'port' on Service or assetserviceAdminListAdminViewModelAdminViewGlobalSettingsCommAdminViewBaseAdminViewBaseAdminObjectViewobject
+ERROR 2018-04-18 03:12:35,681 exception:handle_uncaught_exception:135 Internal Server Error: /xadmin/asset/host/
+Traceback (most recent call last):
+  File "/usr/local/PythonVirtualENV/MyTestENV/lib/python2.7/site-packages/django/core/handlers/exception.py", line 41, in inner
+    response = get_response(request)
+  File "/usr/local/PythonVirtualENV/MyTestENV/lib/python2.7/site-packages/django/core/handlers/base.py", line 249, in _legacy_get_response
+    response = self._get_response(request)
+  File "/usr/local/PythonVirtualENV/MyTestENV/lib/python2.7/site-packages/django/core/handlers/base.py", line 187, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/usr/local/PythonVirtualENV/MyTestENV/lib/python2.7/site-packages/django/core/handlers/base.py", line 185, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/usr/local/PythonVirtualENV/MyTestENV/lib/python2.7/site-packages/xadmin/sites.py", line 300, in wrapper
+    return self.admin_view(view, cacheable)(*args, **kwargs)
+  File "/usr/local/PythonVirtualENV/MyTestENV/lib/python2.7/site-packages/django/views/decorators/cache.py", line 57, in _wrapped_view_func
+    response = view_func(request, *args, **kwargs)
+  File "/usr/local/PythonVirtualENV/MyTestENV/lib/python2.7/site-packages/xadmin/sites.py", line 208, in inner
+    return view(request, *args, **kwargs)
+  File "/usr/local/PythonVirtualENV/MyTestENV/lib/python2.7/site-packages/xadmin/views/base.py", line 279, in view
+    return handler(request, *args, **kwargs)
+  File "/usr/local/PythonVirtualENV/MyTestENV/lib/python2.7/site-packages/django/utils/decorators.py", line 67, in _wrapper
+    return bound_func(*args, **kwargs)
+  File "/usr/local/PythonVirtualENV/MyTestENV/lib/python2.7/site-packages/django/utils/decorators.py", line 149, in _wrapped_view
+    response = view_func(request, *args, **kwargs)
+  File "/usr/local/PythonVirtualENV/MyTestENV/lib/python2.7/site-packages/django/utils/decorators.py", line 63, in bound_func
+    return func.__get__(self, type(self))(*args2, **kwargs2)
+  File "/usr/local/PythonVirtualENV/MyTestENV/lib/python2.7/site-packages/xadmin/views/base.py", line 78, in method
+    return filter_chain(filters, len(filters) - 1, _inner_method, *args, **kwargs)
+  File "/usr/local/PythonVirtualENV/MyTestENV/lib/python2.7/site-packages/xadmin/views/base.py", line 47, in filter_chain
+    return func()
+  File "/usr/local/PythonVirtualENV/MyTestENV/lib/python2.7/site-packages/xadmin/views/base.py", line 72, in _inner_method
+    return func(self, *args, **kwargs)
+  File "/usr/local/PythonVirtualENV/MyTestENV/lib/python2.7/site-packages/xadmin/views/list.py", line 401, in get
+    response = self.get_result_list()
+  File "/usr/local/PythonVirtualENV/MyTestENV/lib/python2.7/site-packages/xadmin/views/base.py", line 78, in method
+    return filter_chain(filters, len(filters) - 1, _inner_method, *args, **kwargs)
+  File "/usr/local/PythonVirtualENV/MyTestENV/lib/python2.7/site-packages/xadmin/views/base.py", line 47, in filter_chain
+    return func()
+  File "/usr/local/PythonVirtualENV/MyTestENV/lib/python2.7/site-packages/xadmin/views/base.py", line 72, in _inner_method
+    return func(self, *args, **kwargs)
+  File "/usr/local/PythonVirtualENV/MyTestENV/lib/python2.7/site-packages/xadmin/views/list.py", line 200, in get_result_list
+    return self.make_result_list()
+  File "/usr/local/PythonVirtualENV/MyTestENV/lib/python2.7/site-packages/xadmin/views/list.py", line 172, in make_result_list
+    self.list_queryset = self.get_list_queryset()
+  File "/usr/local/PythonVirtualENV/MyTestENV/lib/python2.7/site-packages/xadmin/views/base.py", line 78, in method
+    return filter_chain(filters, len(filters) - 1, _inner_method, *args, **kwargs)
+  File "/usr/local/PythonVirtualENV/MyTestENV/lib/python2.7/site-packages/xadmin/views/base.py", line 61, in filter_chain
+    return filter_chain(filters, token - 1, _inner_method, *args, **kwargs)
+  File "/usr/local/PythonVirtualENV/MyTestENV/lib/python2.7/site-packages/xadmin/views/base.py", line 47, in filter_chain
+    return func()
+  File "/usr/local/PythonVirtualENV/MyTestENV/lib/python2.7/site-packages/xadmin/views/base.py", line 60, in _inner_method
+    return fm(func if fargs[1] == '__' else func(), *args, **kwargs)
+  File "/usr/local/PythonVirtualENV/MyTestENV/lib/python2.7/site-packages/xadmin/plugins/filters.py", line 119, in get_list_queryset
+    self.model, field_path)
+  File "/usr/local/PythonVirtualENV/MyTestENV/lib/python2.7/site-packages/django/contrib/admin/utils.py", line 503, in get_fields_from_path
+    fields.append(parent._meta.get_field(piece))
+  File "/usr/local/PythonVirtualENV/MyTestENV/lib/python2.7/site-packages/django/db/models/options.py", line 619, in get_field
+    raise FieldDoesNotExist("%s has no field named '%s'" % (self.object_name, field_name))
+FieldDoesNotExist: Host has no field named 'icmp_monitor'
+ERROR 2018-04-18 03:12:56,197 exception:handle_uncaught_exception:135 Internal Server Error: /xadmin/asset/host/
+Traceback (most recent call last):
+  File "/usr/local/PythonVirtualENV/MyTestENV/lib/python2.7/site-packages/django/core/handlers/exception.py", line 41, in inner
+    response = get_response(request)
+  File "/usr/local/PythonVirtualENV/MyTestENV/lib/python2.7/site-packages/django/core/handlers/base.py", line 249, in _legacy_get_response
+    response = self._get_response(request)
+  File "/usr/local/PythonVirtualENV/MyTestENV/lib/python2.7/site-packages/django/core/handlers/base.py", line 187, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/usr/local/PythonVirtualENV/MyTestENV/lib/python2.7/site-packages/django/core/handlers/base.py", line 185, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/usr/local/PythonVirtualENV/MyTestENV/lib/python2.7/site-packages/xadmin/sites.py", line 300, in wrapper
+    return self.admin_view(view, cacheable)(*args, **kwargs)
+  File "/usr/local/PythonVirtualENV/MyTestENV/lib/python2.7/site-packages/django/views/decorators/cache.py", line 57, in _wrapped_view_func
+    response = view_func(request, *args, **kwargs)
+  File "/usr/local/PythonVirtualENV/MyTestENV/lib/python2.7/site-packages/xadmin/sites.py", line 208, in inner
+    return view(request, *args, **kwargs)
+  File "/usr/local/PythonVirtualENV/MyTestENV/lib/python2.7/site-packages/xadmin/views/base.py", line 279, in view
+    return handler(request, *args, **kwargs)
+  File "/usr/local/PythonVirtualENV/MyTestENV/lib/python2.7/site-packages/django/utils/decorators.py", line 67, in _wrapper
+    return bound_func(*args, **kwargs)
+  File "/usr/local/PythonVirtualENV/MyTestENV/lib/python2.7/site-packages/django/utils/decorators.py", line 149, in _wrapped_view
+    response = view_func(request, *args, **kwargs)
+  File "/usr/local/PythonVirtualENV/MyTestENV/lib/python2.7/site-packages/django/utils/decorators.py", line 63, in bound_func
+    return func.__get__(self, type(self))(*args2, **kwargs2)
+  File "/usr/local/PythonVirtualENV/MyTestENV/lib/python2.7/site-packages/xadmin/views/base.py", line 78, in method
+    return filter_chain(filters, len(filters) - 1, _inner_method, *args, **kwargs)
+  File "/usr/local/PythonVirtualENV/MyTestENV/lib/python2.7/site-packages/xadmin/views/base.py", line 47, in filter_chain
+    return func()
+  File "/usr/local/PythonVirtualENV/MyTestENV/lib/python2.7/site-packages/xadmin/views/base.py", line 72, in _inner_method
+    return func(self, *args, **kwargs)
+  File "/usr/local/PythonVirtualENV/MyTestENV/lib/python2.7/site-packages/xadmin/views/list.py", line 401, in get
+    response = self.get_result_list()
+  File "/usr/local/PythonVirtualENV/MyTestENV/lib/python2.7/site-packages/xadmin/views/base.py", line 78, in method
+    return filter_chain(filters, len(filters) - 1, _inner_method, *args, **kwargs)
+  File "/usr/local/PythonVirtualENV/MyTestENV/lib/python2.7/site-packages/xadmin/views/base.py", line 47, in filter_chain
+    return func()
+  File "/usr/local/PythonVirtualENV/MyTestENV/lib/python2.7/site-packages/xadmin/views/base.py", line 72, in _inner_method
+    return func(self, *args, **kwargs)
+  File "/usr/local/PythonVirtualENV/MyTestENV/lib/python2.7/site-packages/xadmin/views/list.py", line 200, in get_result_list
+    return self.make_result_list()
+  File "/usr/local/PythonVirtualENV/MyTestENV/lib/python2.7/site-packages/xadmin/views/list.py", line 172, in make_result_list
+    self.list_queryset = self.get_list_queryset()
+  File "/usr/local/PythonVirtualENV/MyTestENV/lib/python2.7/site-packages/xadmin/views/base.py", line 78, in method
+    return filter_chain(filters, len(filters) - 1, _inner_method, *args, **kwargs)
+  File "/usr/local/PythonVirtualENV/MyTestENV/lib/python2.7/site-packages/xadmin/views/base.py", line 61, in filter_chain
+    return filter_chain(filters, token - 1, _inner_method, *args, **kwargs)
+  File "/usr/local/PythonVirtualENV/MyTestENV/lib/python2.7/site-packages/xadmin/views/base.py", line 47, in filter_chain
+    return func()
+  File "/usr/local/PythonVirtualENV/MyTestENV/lib/python2.7/site-packages/xadmin/views/base.py", line 60, in _inner_method
+    return fm(func if fargs[1] == '__' else func(), *args, **kwargs)
+  File "/usr/local/PythonVirtualENV/MyTestENV/lib/python2.7/site-packages/xadmin/plugins/filters.py", line 119, in get_list_queryset
+    self.model, field_path)
+  File "/usr/local/PythonVirtualENV/MyTestENV/lib/python2.7/site-packages/django/contrib/admin/utils.py", line 503, in get_fields_from_path
+    fields.append(parent._meta.get_field(piece))
+  File "/usr/local/PythonVirtualENV/MyTestENV/lib/python2.7/site-packages/django/db/models/options.py", line 619, in get_field
+    raise FieldDoesNotExist("%s has no field named '%s'" % (self.object_name, field_name))
+FieldDoesNotExist: Host has no field named 'icmp_monitor'
