@@ -2,10 +2,14 @@
 from __future__ import unicode_literals
 
 from django.db import models
+from django.utils.functional import cached_property
+
+import json
 
 class HostGroup(models.Model):
-    name = models.CharField(max_length=100, default="default", verbose_name="名称")
+    name = models.CharField(max_length=100, default="default", verbose_name="主机组名")
     created_time = models.DateTimeField(auto_now_add=True, verbose_name="创建时间")
+    update_time = models.DateTimeField(auto_now=True, verbose_name="更新时间")
 
     def __str__(self):
         return self.name
@@ -34,7 +38,8 @@ class Host(models.Model):
     status = models.IntegerField(choices=STATUS_ITEMS, default=1, verbose_name="主机状态")
     created_time = models.DateTimeField(auto_now_add=True, verbose_name="创建时间")
     update_time = models.DateTimeField(auto_now=True, verbose_name="更新时间")
-
+    
+    
     def icmp_monitor(self):
         ip = self.ip
         from code_scripts import ping
@@ -68,10 +73,32 @@ class Service(models.Model):
     created_time = models.DateTimeField(auto_now_add=True, verbose_name="创建时间")
     update_time = models.DateTimeField(auto_now=True, verbose_name="更新时间")
     
-    #def service_monitor(self):
-        
 
     class Meta:
         verbose_name_plural = "服务"
 
 
+class ResourceState(models.Model):
+    host = models.ForeignKey(Host, verbose_name="主机")
+    data = models.TextField(verbose_name="收集的资源数据")
+
+    created_time = models.DateTimeField(auto_now_add=True, verbose_name="创建时间")
+
+    #instance cache
+    @cached_property
+    def json_data(self):
+        return json.loads(self.data)
+
+    def __getattr__(self, name):
+        if not name.startswith('__'):
+            try:
+                data = self.json_data[name]
+                if isinstance(data, str):
+                    data = data.replace('\r\n', '<br/>')
+                return data
+            except KeyError:
+                raise AttributeError("'%s' object has no attribute '%s'" % (self, name))
+   
+    class Meta:
+        verbose_name_plural = "资源状态"
+        get_latest_by = 'created_time'

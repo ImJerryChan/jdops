@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en-us" >
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0">
+  <meta name="description" content="">
+  <meta name="author" content="">
+  <meta name="robots" content="NONE,NOARCHIVE" />
+  <title>主页面 | 京东云运维管理平台</title>
+  <link href="/static/xadmin/vendor/bootstrap/css/bootstrap.css" type="text/css" media="screen" rel="stylesheet" />
+  <link rel="stylesheet" type="text/css" href="/static/xadmin/css/themes/bootstrap-xadmin.css" />
+  <link href="/static/xadmin/vendor/font-awesome/css/font-awesome.css" type="text/css" media="screen" rel="stylesheet" />
+  <link href="/static/xadmin/css/xadmin.main.css" type="text/css" media="screen" rel="stylesheet" />
+  <link href="/static/xadmin/css/xadmin.plugins.css" type="text/css" media="screen" rel="stylesheet" />
+  <link href="/static/xadmin/css/xadmin.responsive.css" type="text/css" media="screen" rel="stylesheet" />
+  <link href="/static/xadmin/css/xadmin.page.dashboard.css" type="text/css" media="screen" rel="stylesheet" />
+  <script type="text/javascript" src="/static/xadmin/vendor/jquery/jquery.js"></script>
+  <script type="text/javascript">
+    window.__admin_media_prefix__ = "/static/xadmin/";
+    window.__admin_path_prefix__ = "/xadmin/";
+    window.__admin_language_code__ = "";
+  </script>
+  <script type="text/javascript" src="/xadmin/jsi18n/"></script>
+</head>
+
+<body class="dashboard">
+  <div id="top-nav" class="navbar navbar-xs navbar-inverse navbar-fixed-top">
+    <div class="navbar-header">
+      <a class="navbar-brand" href="#">京东云运维管理平台</a>
+    </div>
+  </div>
+  <div id="content-main">
+    {% for host in hosts %}
+    <div class="checkbox">
+      <label>
+        <input type="checkbox"> {{ host }}
+      </label>
+    </div>
+    {% endfor %}
+  </div>
+
+  <div id="footer">
+      p
+    <hr/>
+    <footer class="text-center">
+        <p>&copy; imjerrychan.xyz</p>
+    </footer>
+  </div>
+  
+
+
+<script type="text/javascript" src="/static/xadmin/vendor/jquery-ui/jquery.ui.core.js"></script>
+<script type="text/javascript" src="/static/xadmin/vendor/jquery-ui/jquery.ui.widget.js"></script>
+<script type="text/javascript" src="/static/xadmin/vendor/jquery-ui/jquery.ui.mouse.js"></script>
+<script type="text/javascript" src="/static/xadmin/vendor/jquery-ui/jquery.ui.sortable.js"></script>
+<script type="text/javascript" src="/static/xadmin/vendor/bootstrap/js/bootstrap.js"></script>
+<script type="text/javascript" src="/static/xadmin/js/xadmin.main.js"></script>
+<script type="text/javascript" src="/static/xadmin/js/xadmin.responsive.js"></script>
+<script type="text/javascript" src="/static/xadmin/js/xadmin.page.dashboard.js"></script>
+<script type="text/javascript" src="/static/xadmin/js/xadmin.plugin.portal.js"></script>
+<script type="text/javascript" src="/static/xadmin/vendor/flot/jquery.flot.js"></script>
+<script type="text/javascript" src="/static/xadmin/vendor/flot/jquery.flot.pie.js"></script>
+<script type="text/javascript" src="/static/xadmin/vendor/flot/jquery.flot.time.js"></script>
+<script type="text/javascript" src="/static/xadmin/vendor/flot/jquery.flot.resize.js"></script>
+<script type="text/javascript" src="/static/xadmin/vendor/flot/jquery.flot.aggregate.js"></script>
+<script type="text/javascript" src="/static/xadmin/vendor/flot/jquery.flot.categories.js"></script>
+<script type="text/javascript" src="/static/xadmin/js/xadmin.plugin.charts.js"></script>
+  
+  
+</body>
+</html>

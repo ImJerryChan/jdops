@@ -7,8 +7,6 @@ author:samuel
 """
 
 import os, sys, socket, struct, select, time
-reload(sys)
-sys.setdefaultencoding('utf-8')
 
 class ICMP_Monitor(object):
     def __init__(self):
